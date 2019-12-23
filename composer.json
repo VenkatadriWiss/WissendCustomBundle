@@ -9,7 +9,8 @@
     "authors": [
         {
             "name": "VenkatadriWiss",
-            "email": "venkat@wissend.com"
+            "email": "venkat@wissend.com",
+            "homepage": "http://www.wissend.com/"
         }
     ],
     "support": {
@@ -26,7 +27,7 @@
         "php": ">=7.2.0"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "Wissend\\Bundle\\CustomBundle\\WissendCustomBundle\\": "*"
         }
     },
