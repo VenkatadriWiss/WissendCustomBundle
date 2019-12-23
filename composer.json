@@ -2,7 +2,7 @@
     "name": "VenkatadriWiss/WissendCustomBundle",
     "description": "Wissend Custom Bundle",
     "type": "symfony-bundle",
-    "minimum-stability":"stable",
+    "minimum-stability":"dev",
     "version":"1.0.0",
     "license": "MIT",
     "authors": [
@@ -11,5 +11,28 @@
             "email": "venkat@wissend.com"
         }
     ],
-    "require": {}
+    "support": {
+        "source": "https://github.com/VenkatadriWiss/WissendCustomBundle",
+        "docs": "https://github.com/VenkatadriWiss/WissendCustomBundle",
+        "issues": "https://github.com/VenkatadriWiss/WissendCustomBundle/issues"
+    },
+    "keywords": [
+        "project repository",
+        "package bundle",
+        "sub-folder packages",
+        "custom repository",
+        "consolidated local repository",
+        "install from zip",
+        "install from remote tarball",
+        "install from github"
+    ],
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wissend\\Bundle\\CustomBundle\\WissendCustomBundle\\": "src"
+        }
+    }
+
 }
