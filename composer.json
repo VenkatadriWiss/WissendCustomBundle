@@ -5,6 +5,7 @@
     "minimum-stability":"dev",
     "version":"1.0.0",
     "license": "MIT",
+    "homepage":    "https://github.com/VenkatadriWiss/WissendCustomBundle",
     "authors": [
         {
             "name": "VenkatadriWiss",
@@ -17,22 +18,18 @@
         "issues": "https://github.com/VenkatadriWiss/WissendCustomBundle/issues"
     },
     "keywords": [
-        "project repository",
-        "package bundle",
-        "sub-folder packages",
-        "custom repository",
-        "consolidated local repository",
-        "install from zip",
-        "install from remote tarball",
-        "install from github"
+        
+        "Wissend Custom Bundle",
+        
     ],
     "require": {
         "php": ">=7.2.0"
     },
     "autoload": {
-        "psr-4": {
-            "Wissend\\Bundle\\CustomBundle\\WissendCustomBundle\\": "src"
+        "psr-0": {
+            "Wissend\\Bundle\\CustomBundle\\WissendCustomBundle\\": "*"
         }
-    }
+    },
+    "target-dir": "Wissend/Bundle/CustomBundle/WissendCustomBundle"
 
 }
