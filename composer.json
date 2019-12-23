@@ -1,5 +1,5 @@
 {
-    "name": "VenkatadriWiss/WissendCustomBundle",
+    "name": "wissenddevops/wissendcustombundle",
     "description": "Wissend Custom Bundle",
     "type": "symfony-bundle",
     "minimum-stability":"s",
