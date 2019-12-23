@@ -2,14 +2,13 @@
     "name": "wissenddevops/wissendcustombundle",
     "description": "Wissend Custom Bundle",
     "type": "symfony-bundle",
-    "minimum-stability":"s",
-    "version":"1.0.0",
+    "minimum-stability":"dev-master",
     "license": "MIT",
     "homepage":    "https://github.com/VenkatadriWiss/WissendCustomBundle",
     "authors": [
         {
-            "name": "VenkatadriWiss",
-            "email": "venkat@wissend.com",
+            "name": "wissenddevops",
+            "email": "wissenddevops@github.com",
             "homepage": "http://www.wissend.com/"
         }
     ],
