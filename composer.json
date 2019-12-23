@@ -2,7 +2,7 @@
     "name": "VenkatadriWiss/WissendCustomBundle",
     "description": "Wissend Custom Bundle",
     "type": "symfony-bundle",
-    "minimum-stability":"dev",
+    "minimum-stability":"s",
     "version":"1.0.0",
     "license": "MIT",
     "homepage":    "https://github.com/VenkatadriWiss/WissendCustomBundle",
@@ -27,6 +27,10 @@
         "psr-4": {
             "Wissend\\Bundle\\CustomBundle\\WissendCustomBundle\\": "*"
         }
+    },
+    "require": {
+    "php": ">=7.2.0",
+    "wissenddevops/wissendcustombundle": "^1.0"
     },
     "target-dir": "Wissend/Bundle/CustomBundle/WissendCustomBundle"
 
