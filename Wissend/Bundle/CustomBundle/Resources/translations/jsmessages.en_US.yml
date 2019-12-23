@@ -1,0 +1,37 @@
+pim_title:
+    wissend_custom_homepage:               Wissend Dashboard
+    wissend_custom_settings:               Wissend Setting
+
+pim_menu:
+    tab:
+        activity: Activity
+        imports: Imports
+        exports: Exports
+        settings: Settings
+        system: System
+        help:
+            title: Help
+            helper: Akeneo Help center
+    item:
+      
+        wissend_dashboard: Wissend Dashboard
+        wissend_setting: Wissend Setting
+
+    navigation:
+        activity: Activity navigation
+        system: System navigation
+        user: Users management navigation
+        settings: Settings navigation
+        product: Product navigation
+        product_infos: Product infos
+
+    user:
+        logout: Logout
+        user_account: My Account
+
+pim_notification:
+    types:
+        import: Import
+        export: Export
+        quick_export: Quick Export
+        mass_edit: Mass Edit

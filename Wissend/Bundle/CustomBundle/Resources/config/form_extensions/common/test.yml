@@ -1,0 +1,20 @@
+extensions:
+    # Activity
+    pim-menu-activity-wissend-dashboard:
+        module: pim/menu/item
+        parent: pim-menu-activity-navigation-block
+        position: 113
+        config:
+            title: pim_menu.item.wissend_dashboard
+            to: wissend_custom_homepage        
+
+
+    pim-menu-wissend-settings:
+        module: pim/menu/tab
+        parent: pim-menu
+        position: 80
+        targetZone: mainMenu
+        config:
+            title: pim_menu.item.wissend_setting
+            iconModifier: iconSettings
+            to: wissend_custom_settings   

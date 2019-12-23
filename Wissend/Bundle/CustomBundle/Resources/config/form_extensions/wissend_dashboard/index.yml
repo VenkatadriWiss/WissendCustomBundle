@@ -1,0 +1,68 @@
+extensions:
+    wissend-dashboard-index:
+        module: pim/common/simple-view
+        #aclResourceId: wissend_dashboard
+        config:
+            template: pim/template/common/default-template
+
+    #wissend-dashboard-index-grid-container:
+     #   module: pim/common/simple-view
+    #    parent: wissend-dashboard-index
+     #   targetZone: content
+     #   config:
+     #       template: pim/template/form/index/index
+
+    wissend-dashboard-index-grid-container:
+        module: pim/common/simple-view
+        parent: wissend-dashboard-index
+        targetZone: content
+        config:
+            template: pim/template/product/index
+            templateParams:
+                gridName: product-grid
+
+    wissend-dashboard-index-user-navigation:
+        module: pim/menu/user-navigation
+        parent: wissend-dashboard-index
+        targetZone: user-menu
+        config:
+            userAccount: pim_menu.user.user_account
+            logout: pim_menu.user.logout
+
+            
+    wissend-dashboard-index-grid-title:
+        module: pim/common/grid-title
+        parent: wissend-dashboard-index
+        targetZone: title
+        config:
+            countable: false
+            title: "Wissend Dashboard"
+
+    wissend-dashboard-index-breadcrumbs:
+        module: pim/common/breadcrumbs
+        parent: wissend-dashboard-index
+        targetZone: breadcrumbs
+        config:
+            tab: pim-menu-activity
+            item:  pim-menu-activity-wissend-dashboard
+
+   # wissend-dashboard-index-body:
+    #    module: wissend_dashboard/content
+    #    parent: wissend-dashboard-index
+    #    targetZone: content
+    #    config:
+    #        tab: pim-menu-activity
+    #        item:  pim-menu-activity-wissend-dashboard
+
+    wissend-dashboard-index-data:
+        module: pim/grid/table
+        parent: wissend-dashboard-index-grid-container
+        targetZone: grid
+        config:
+            gridName: product-grid
+            localeParamName: dataLocale
+            datagridLoadUrl: pim_datagrid_load
+            
+           
+
+   

@@ -1,0 +1,21 @@
+config:
+    paths:
+        wissend_dashboard/custom: wissendcustom/js/controller/wissenddashboard
+        wissend_dashboard/template: wissendcustom/templates/wissenddashboard.html
+        wissend_settings/custom: wissendcustom/js/controller/wissendsetting
+        wissend_dashboard/content: wissendcustom/js/controller/wissenddashboarddata
+        pim/common/properties/translation: pimui/js/form/common/properties/translation
+        wissend/add-comment: wissendcustom/add-comment
+        wissend/template/add-comment: wissendcustom/templates/add-comment.html
+        wissend/mass-edit-form/product/custom: wissendcustom/js/mass-edit/form/product/custom
+
+    config:
+        pim/controller-registry:
+            controllers:
+                wissend_custom_homepage:
+                    module: wissend_dashboard/custom
+                	#aclResourceId: wissend_dashboard
+
+                wissend_custom_settings:
+                    module: wissend_settings/custom
+                    #aclResourceId: wissend_settings

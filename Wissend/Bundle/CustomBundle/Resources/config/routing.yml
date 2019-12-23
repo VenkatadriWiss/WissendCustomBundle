@@ -1,0 +1,6 @@
+wissend_custom_homepage:
+    path: /dashboard
+
+wissend_custom_settings:
+    path: /setting
+

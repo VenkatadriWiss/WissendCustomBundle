@@ -1,0 +1,42 @@
+parameters:
+    pim_enrich.connector.job.job_parameters.default_values_provider.product_mass_edit.class: Akeneo\Pim\Enrichment\Component\Product\Connector\Job\JobParameters\DefaultValueProvider\ProductMassEdit
+    pim_enrich.connector.job.job_parameters.constraint_collection_provider.product_mass_edit.class: 'Akeneo\Pim\Enrichment\Component\Product\Connector\Job\JobParameters\ConstraintCollectionProvider\ProductMassEdit'
+
+services:
+    wissend.job.add_comment:
+        class: '%pim_connector.job.simple_job.class%'
+        arguments:
+            - 'add_comment'
+            - '@event_dispatcher'
+            - '@akeneo_batch.job_repository'
+            - [ '@wissend_custom.step.add_comment.mass_edit' ]
+        tags:
+            -
+                name: akeneo_batch.job
+                connector: '%pim_enrich.connector_name.mass_edit%'
+                type: '%pim_enrich.job.mass_edit_type%'
+
+    wissend.job.default_values_provider.add_comment:
+        class: '%pim_enrich.connector.job.job_parameters.default_values_provider.product_mass_edit.class%'
+        arguments:
+            - [ 'add_comment' ]
+        tags:
+            - { name: akeneo_batch.job.job_parameters.default_values_provider }
+
+    wissend.job.constraint_collection_provider.add_comment:
+        class: '%pim_enrich.connector.job.job_parameters.constraint_collection_provider.product_mass_edit.class%'
+        arguments:
+            - [ 'add_comment' ]
+        tags:
+            - { name: akeneo_batch.job.job_parameters.constraint_collection_provider }
+
+    wissend_custom.job.capitalize_values:
+        class: '%pim_connector.job.simple_job.class%'
+        arguments:
+            - 'mass_edit_capitalize_values'
+            - '@event_dispatcher'
+            - '@akeneo_batch.job_repository'
+            -
+                - '@wissend_custom.step.capitalize_values.mass_edit'
+        tags:
+            - { name: akeneo_batch.job, connector: '%pim_enrich.connector_name.mass_edit%', type: '%pim_enrich.job.mass_edit_type%' }        

@@ -1,0 +1,4 @@
+services:
+#    wissend_custom.example:
+#        class: Wissend\Bundle\CustomBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

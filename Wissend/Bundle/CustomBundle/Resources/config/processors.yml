@@ -1,0 +1,17 @@
+parameters:
+  wissend.custom.connector.processor.mass_edit.product.class: Wissend\Bundle\CustomBundle\Connector\Processor\MassEdit\Product\AddCommentProcessor
+
+services:
+  wissend.custom.connector.processor.mass_edit.product:
+    class: "%wissend.custom.connector.processor.mass_edit.product.class%"
+    arguments:
+      - "@pim_comment.builder.comment"
+      - "@pim_comment.saver.comment"
+      - "@pim_user.repository.user"
+
+  wissend_custom.mass_edit.capitalize_values.processor:
+    class: Wissend\Bundle\CustomBundle\Connector\Processor\MassEdit\Product\CapitalizeValuesProcessor
+    arguments:
+      #- '@pim_catalog.updater.product_property_setter'
+      - '@pim_catalog.updater.property_setter'
+      - '@pim_catalog.validator.product'    

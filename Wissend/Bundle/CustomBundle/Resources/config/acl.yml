@@ -1,0 +1,9 @@
+wissend_dashboard:
+    type: action
+    label: Wissend Dashboard
+    group_name: pim_analytics.acl_group.system_info
+
+wissend_settings:
+  type: action
+  label: Wissend Settings
+  group_name: pim_analytics.acl_group.system_info
