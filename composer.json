@@ -4,7 +4,7 @@
     "type": "symfony-bundle",
     "minimum-stability":"dev-master",
     "license": "MIT",
-    "homepage":    "https://github.com/VenkatadriWiss/WissendCustomBundle",
+    "homepage":    "https://github.com/wissenddevops/wissendcustombundle",
     "authors": [
         {
             "name": "wissenddevops",
@@ -13,18 +13,22 @@
         }
     ],
     "support": {
-        "source": "https://github.com/VenkatadriWiss/WissendCustomBundle",
-        "docs": "https://github.com/VenkatadriWiss/WissendCustomBundle",
-        "issues": "https://github.com/VenkatadriWiss/WissendCustomBundle/issues"
+        "source": "https://github.com/wissenddevops/wissendcustombundle",
+        "docs": "https://github.com/wissenddevops/wissendcustombundle",
+        "issues": "https://github.com/wissenddevops/wissendcustombundle/issues"
     },
     "keywords": [
         
         "Wissend Custom Bundle"
         
     ],
+    "classmap": [
+            "app/AppKernel.php",
+            "app/AppCache.php"
+    ],
     "autoload": {
         "psr-4": {
-            "Wissend\\Bundle\\CustomBundle\\WissendCustomBundle\\": "*"
+            "Wissend\\Bundle\\CustomBundle\\WissendCustomBundle\\": "src/"
         }
     },
     "require": {
