@@ -22,15 +22,15 @@
         "Wissend Custom Bundle"
         
     ],
+    "autoload": {
+        "psr-4": {
+             "": "src/"
+        }
+    },
     "classmap": [
             "app/AppKernel.php",
             "app/AppCache.php"
     ],
-    "autoload": {
-        "psr-4": {
-            "Wissend\\Bundle\\CustomBundle\\WissendCustomBundle\\": "src/"
-        }
-    },
     "require": {
     "php": ">=7.2.0",
     "wissenddevops/wissendcustombundle": "^4.0"
