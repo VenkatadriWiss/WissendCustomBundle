@@ -1,0 +1,14 @@
+{
+    "name": "VenkatadriWiss/WissendCustomBundle",
+    "description": "Wissend Custom Bundle",
+    "type": "symfony-bundle",
+    "minimum-stability":"dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "VenkatadriWiss",
+            "email": "venkat@wissend.com"
+        }
+    ],
+    "require": {}
+}
