@@ -28,10 +28,8 @@ class WissendCustomExtension extends Extension
         $loader->load('locale_provider.yml');
         $loader->load('processors.yml');
         $loader->load('jobs.yml');
-        //$loader->load('requirejs.yml');
         $loader->load('steps.yml');
         $loader->load('job_parameters.yml');
         $loader->load('mass_actions.yml');
-        //$loader->load('config.yml');
     }
 }

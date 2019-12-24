@@ -1,37 +1,26 @@
+# ORO messages
 pim_title:
-    wissend_custom_homepage:               Wissend Dashboard
-    wissend_custom_settings:               Wissend Setting
-
+    pim_enrich_catalog_volume_index: Catalog volume monitoring
+    wissend_dashboard: Wissend Dashboard
+    wissend_settings: Wissend Settings
+    
 pim_menu:
-    tab:
-        activity: Activity
-        imports: Imports
-        exports: Exports
-        settings: Settings
-        system: System
-        help:
-            title: Help
-            helper: Akeneo Help center
     item:
-      
+        catalog_volume: Catalog volume monitoring
         wissend_dashboard: Wissend Dashboard
-        wissend_setting: Wissend Setting
+        wissend_settings: Wissend Settings
 
-    navigation:
-        activity: Activity navigation
-        system: System navigation
-        user: Users management navigation
-        settings: Settings navigation
-        product: Product navigation
-        product_infos: Product infos
+pim_enrich.mass_edit_action:
+    capitalize-values:
+        label: Capitalize values
+        description: The selected product(s) will have capitalized values
+        launched_flash: The bulk action "capitalize values" has been launched. You will be notified when it is done.
+        success_flash: Product(s) values have been updated
 
-    user:
-        logout: Logout
-        user_account: My Account
+batch_jobs:
+    mass_edit_capitalize_values:
+        capitalize_values:
+            label: Capitalize values
 
-pim_notification:
-    types:
-        import: Import
-        export: Export
-        quick_export: Quick Export
-        mass_edit: Mass Edit
+wissend.mass_edit:
+    cap_title: Capitalize

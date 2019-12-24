@@ -42,25 +42,17 @@ class CapitalizeValuesProcessor extends AbstractProcessor
 
         // Retrieve custom config from the action
         $field = $actions['field'];
-        if(empty($field)){
-        }
-            $field='name';
         $options = $actions['options'];
-        if(empty($options)){
-        }
-            $options=array('locale' => null, 'scope' => null);
-        //print_r("field Name".$field);
-        //print_r("field options".$options);
 
         // Capitalize the attribute value of the product
         $originalValue    = $product->getValue($field)->getData();
-
         $capitalizedValue = strtoupper($originalValue);
 
         // Use the property setter to update the product
         $newData = ['field' => $field, 'value' => $capitalizedValue, 'options' => $options];
         $this->setData($product, [$newData]);
-      
+
+        // Validate the product
         if (null === $product || (null !== $product && !$this->isProductValid($product))) {
             $this->stepExecution->incrementSummaryInfo('skipped_products');
 

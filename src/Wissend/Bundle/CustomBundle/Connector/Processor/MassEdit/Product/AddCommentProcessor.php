@@ -7,8 +7,10 @@ use Akeneo\Tool\Component\StorageUtils\Saver\SaverInterface;
 use Akeneo\Pim\Enrichment\Component\Comment\Builder\CommentBuilder;
 use Akeneo\Pim\Enrichment\Component\Comment\Model\CommentInterface;
 use Akeneo\Pim\Enrichment\Component\Product\Connector\Processor\MassEdit\AbstractProcessor;
+//use Akeneo\UserManagement\Bundle\Repository\UserRepositoryInterface;
 use Akeneo\UserManagement\Bundle\Doctrine\ORM\Repository\UserRepository;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
+
 class AddCommentProcessor extends AbstractProcessor
 {
     protected $commentBuilder;

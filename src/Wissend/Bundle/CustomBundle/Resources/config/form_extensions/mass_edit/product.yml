@@ -10,20 +10,18 @@ extensions:
             description: 'Add a comment for a set of products'
             code: add_comment
             jobInstanceCode: add_comment
-            icon: icon-comment
+            icon: icon-template
 
     wissend-mass-product-edit-product-custom:
-        module: pim/mass-edit-form/product/custom
+        module: wissend/mass-edit-form/product/custom
         parent: pim-mass-product-edit
         position: 210
         targetZone: custom
         config:
-            title: pim_enrich.mass_edit.product.title
-            label: Capitalize values
+            title: 'Capitalize values'
+            label: 'Capitalize values'
             labelCount: "{1}Capitalized values to <span class=\"AknFullPage-title--highlight\">1 product</span>|]1, Inf[Capitalized values to <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} products</span>"
-            description: The selected product(s) will have capitalized values
+            description: 'The selected product(s) will have capitalized values'
             code: mass_edit_capitalize_values
             jobInstanceCode: mass_edit_capitalize_values
-            icon: icon-custom
-            illustration: categories
-            fetcher: category       
+            icon: icon-template        

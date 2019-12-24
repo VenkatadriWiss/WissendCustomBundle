@@ -19,7 +19,7 @@ class CapitalizeValues extends AbstractMassEditOperation
      */
     public function getFormType()
     {
-        return 'wissend.custom_bundle.mass_edit_action.operation.capitalize_values';
+        return 'acme_custom_mass_action_operation_capitalize_values';
     }
 
     /**

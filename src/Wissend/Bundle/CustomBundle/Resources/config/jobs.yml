@@ -9,7 +9,7 @@ services:
             - 'add_comment'
             - '@event_dispatcher'
             - '@akeneo_batch.job_repository'
-            - [ '@wissend_custom.step.add_comment.mass_edit' ]
+            - [ '@wissend.step.add_comment.mass_edit' ]
         tags:
             -
                 name: akeneo_batch.job

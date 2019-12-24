@@ -1,5 +1,5 @@
 services:
-    wissend_custom.step.add_comment.mass_edit:
+    wissend.step.add_comment.mass_edit:
         class: '%pim_connector.step.item_step.class%'
         arguments:
             - 'perform'
