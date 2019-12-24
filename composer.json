@@ -28,7 +28,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "": "src/"
+            "": "src/",
+            "Wissend\\Bundle\\CustomBundle\\WissendCustomBundle": "vendor/wissenddevops/wissendcustombundle/"
         }
     },
     "require": {
