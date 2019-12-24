@@ -1,5 +1,10 @@
 {
     "name": "wissenddevops/wissendcustombundle",
+    "config": {
+        "github-oauth": {
+            "github.com": "d42015f7db3f506d6f879af030c5b6bd5a73858b"
+        }
+    },
     "description": "Wissend Custom Bundle",
     "type": "symfony-bundle",
     "minimum-stability":"dev-master",
