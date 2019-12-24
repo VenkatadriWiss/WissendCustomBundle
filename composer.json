@@ -28,9 +28,6 @@
             "" : "src/"
         }
     },
-     "classmap": [
-            "app/AppKernel.php"
-        ],
     "require": {
     "php": ">=7.2.0",
     "wissenddevops/wissendcustombundle": "^4.0"
