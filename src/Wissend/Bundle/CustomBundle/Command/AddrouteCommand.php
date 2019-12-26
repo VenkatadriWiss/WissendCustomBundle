@@ -27,35 +27,11 @@ class AddrouteCommand extends ContainerAwareCommand
 
     protected function configure()
     {
-        $this
-            ->setName('wissend:addroute')
-            ->setDescription('Greet someone')
-            ->addArgument(
-                'name',
-                InputArgument::OPTIONAL,
-                'Who do you want to greet?'
-            )
-            ->addOption(
-                'yell',
-                null,
-                InputOption::VALUE_NONE,
-                'If set, the task will yell in uppercase letters'
-            )
-        ;
+        $this->setName('wissend:addroute');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
-    {
-        $name = $input->getArgument('name');
-        if ($name) {
-            $text = 'Hello '.$name;
-        } else {
-            $text = 'Hello';
-        }
-
-        if ($input->getOption('yell')) {
-            $text = strtoupper($text);
-        }
+    {        
        // public ContainerBuilder $container
         $this->container = $this->getApplication()->getKernel()->getContainer();
 
@@ -65,14 +41,10 @@ class AddrouteCommand extends ContainerAwareCommand
             $wissend_custom_array['prefix']='/wissend';
             if(!array_key_exists('wissend_custom', $yaml)){
                 $yaml['wissend_custom'] =$wissend_custom_array;
+                $afteryaml = Yaml::dump($yaml);
+                file_put_contents($this->container->get('kernel')->getRootDir() .'/config/routing.yml', $afteryaml);
             }
-        
-
-        $afteryaml = Yaml::dump($yaml);
-
-        file_put_contents($this->container->get('kernel')->getRootDir() .'/config/routing.yml', $afteryaml);
-        $output->writeln("Successfully Saved into routing yml");
-        //$output->writeln(json_encode($yaml));
+            $output->writeln("Successfully Saved into routing yml");
     }
 
     
