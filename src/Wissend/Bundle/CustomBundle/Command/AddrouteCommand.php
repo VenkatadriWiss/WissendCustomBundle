@@ -33,18 +33,22 @@ class AddrouteCommand extends ContainerAwareCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {        
        // public ContainerBuilder $container
-        $this->container = $this->getApplication()->getKernel()->getContainer();
+        try{
+            $this->container = $this->getApplication()->getKernel()->getContainer();
 
-        $yaml = Yaml::parse(file_get_contents($this->container->get('kernel')->getRootDir() .'/config/routing.yml'));
-            $wissend_custom_array=array();
-            $wissend_custom_array['resource']='@WissendCustomBundle/Resources/config/routing.yml';
-            $wissend_custom_array['prefix']='/wissend';
-            if(!array_key_exists('wissend_custom', $yaml)){
-                $yaml['wissend_custom'] =$wissend_custom_array;
-                $afteryaml = Yaml::dump($yaml);
-                file_put_contents($this->container->get('kernel')->getRootDir() .'/config/routing.yml', $afteryaml);
+            $yaml = Yaml::parse(file_get_contents($this->container->get('kernel')->getRootDir() .'/config/routing.yml'));
+                $wissend_custom_array=array();
+                $wissend_custom_array['resource']='@WissendCustomBundle/Resources/config/routing.yml';
+                $wissend_custom_array['prefix']='/wissend';
+                if(!array_key_exists('wissend_custom', $yaml)){
+                    $yaml['wissend_custom'] =$wissend_custom_array;
+                    $afteryaml = Yaml::dump($yaml);
+                    file_put_contents($this->container->get('kernel')->getRootDir() .'/config/routing.yml', $afteryaml);
+                    $output->writeln("Successfully saved into routing yml");
+                }
+            }catch(\Exception $e){
+               $output->writeln("Exception in writing into routing yml reason : ".$e->getMessage()); 
             }
-            $output->writeln("Successfully Saved into routing yml");
     }
 
     
